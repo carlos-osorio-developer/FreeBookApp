@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './components/header';
 import List from './components/list';
 import NewForm from './components/newForm';
 
@@ -24,6 +25,7 @@ export default function App() {
 
   return (
     <div className="app">
+      <Header />
       <List books={books} />
       <NewForm />
     </div>
