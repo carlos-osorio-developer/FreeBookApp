@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, NavLink, Link } from 'react-router-dom';
 
 export default function Header() {
   const links = [
@@ -19,19 +19,22 @@ export default function Header() {
     <div>
       <header className="header">
         <h1 className="header-title">
-          <a href="/">
+          <Link to="/">
             <span className="header-title-text">
               Book Tracker
             </span>
-          </a>
+          </Link>
         </h1>
         <nav className="header-nav">
           <ul className="header-nav-list">
             {links.map((link) => (
               <li key={link.id} className="header-nav-item">
-                <a href={link.path} className="header-nav-link">
+                <NavLink
+                  to={link.path}
+                  className="header-nav-link"
+                >
                   {link.text}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>
