@@ -1,10 +1,29 @@
 import React from 'react';
-import Book from './components/book';
+import List from './components/list';
 
 export default function App() {
+  const books = [
+    {
+      id: 1,
+      title: 'The Lord of the Rings',
+      author: 'J.R.R. Tolkien',
+      category: 'Fantasy',
+      completed: 0,
+      chapter: 1,
+    },
+    {
+      id: 2,
+      title: 'The Hobbit',
+      author: 'J.R.R. Tolkien',
+      category: 'Fantasy',
+      completed: 30,
+      chapter: 2,
+    },
+  ];
+
   return (
     <div className="app">
-      <Book title="The Hobbit" author="J.R.R. Tolkien" category="Fantasy" completed={60} chapter={3} />
+      <List books={books} />
     </div>
   );
 }
