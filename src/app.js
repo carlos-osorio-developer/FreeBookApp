@@ -1,7 +1,8 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Header from './components/header';
 import List from './components/list';
-import NewForm from './components/newForm';
+import Categories from './pages/categories';
 
 export default function App() {
   const books = [
@@ -26,8 +27,10 @@ export default function App() {
   return (
     <div className="app">
       <Header />
-      <List books={books} />
-      <NewForm />
+      <Routes>
+        <Route path="/" element={<List books={books} />} />
+        <Route path="categories" element={<Categories />} />
+      </Routes>
     </div>
   );
 }

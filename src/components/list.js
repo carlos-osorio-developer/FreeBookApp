@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Book from './book';
+import NewForm from './newForm';
 
 export default function List(props) {
   const {
@@ -19,6 +20,7 @@ export default function List(props) {
           chapter={book.chapter}
         />
       ))}
+      <NewForm />
     </div>
   );
 }
