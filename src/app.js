@@ -1,10 +1,10 @@
-import React from "react";
-import Book from "./components/book";
+import React from 'react';
+import Book from './components/book';
 
 export default function App() {
-  return(
+  return (
     <div className="app">
-      <Book />
+      <Book title="The Hobbit" author="J.R.R. Tolkien" category="Fantasy" completed={60} chapter={3} />
     </div>
-  )
+  );
 }
