@@ -1,5 +1,6 @@
 import React from 'react';
 import List from './components/list';
+import NewForm from './components/newForm';
 
 export default function App() {
   const books = [
@@ -24,6 +25,7 @@ export default function App() {
   return (
     <div className="app">
       <List books={books} />
+      <NewForm />
     </div>
   );
 }
