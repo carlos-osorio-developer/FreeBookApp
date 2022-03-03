@@ -5,7 +5,7 @@ import List from './components/list';
 import Categories from './pages/categories';
 import './app.css';
 
-export default function App() {
+export default function App() {   
   const books = [
     {
       id: 1,
