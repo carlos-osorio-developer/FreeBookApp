@@ -3,23 +3,23 @@ const REMOVE_BOOK = 'freeBookApp/books/REMOVE_BOOK';
 
 const initialState = [];
 
-export const addBook = payload => ({
+export const addBook = (payload) => ({
   type: ADD_BOOK,
-  payload
+  payload,
 });
 
-export const removeBook = payload => ({
+export const removeBook = (payload) => ({
   type: REMOVE_BOOK,
-  payload
+  payload,
 });
 
-export default reducer = (state = initialState, action) => {
+export default function reducer(state = initialState, action) {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.payload];
     case REMOVE_BOOK:
-      return state.filter(book => book.id !== action.payload.id);
+      return state.filter((book) => book.id !== action.payload.id);
     default:
       return state;
   }
-};
+}
