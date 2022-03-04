@@ -6,9 +6,10 @@ const API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/book
 const API_KEY = 'upaRL8JIMk8no5RKgL1L';
 
 const getBooks = () => async (dispatch) => {
-  const response = await fetch(`${API_URL}/${API_KEY}/books`);
+  dispatch({ type: GET_BOOKS });
+  const response = await fetch(`${API_URL}/${API_KEY}/books/`);
   const data = await response.json();
-  dispatch({ type: GET_BOOKS_SUCCESS, payload: data });
+  return dispatch({ type: GET_BOOKS_SUCCESS, data });
 };
 
 export {

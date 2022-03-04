@@ -1,9 +1,14 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Book from './book';
 import NewForm from './newForm';
+import getBooks from '../redux/books/booksSlice';
 
 export default function List() {
+  useEffect(() => {
+    getBooks();
+  }, []);
+
   const books = useSelector((state) => state.books);
 
   return (
