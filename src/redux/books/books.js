@@ -35,7 +35,18 @@ export default function reducer(state = initialState, action) {
     case GET_BOOKS_FAILURE:
       return { ...state, pending: false, error: action.payload };
     case ADD_BOOK:
-      return [...state, action.payload];
+      fetch(`${API_URL}/${API_KEY}/books/`, {
+        method: 'POST',
+        body: JSON.stringify({
+          item_id: action.payload.id,
+          title: action.payload.title,
+          category: action.payload.category,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      return state;
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload.id);
     default:
