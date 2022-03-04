@@ -11,10 +11,11 @@ export default function List() {
     dispatch(getBooks());
   }, []);
 
-  const JsonBooks = useSelector((state) => state.booksState.books) || [{ id: 0, title: 'No books yet...' }];
-  const booksIds = Object.keys(JsonBooks);
-  const books = [];
-  booksIds.forEach((id) => { books.push({ id, ...JsonBooks[id][0] }); });
+  const books = useSelector((state) => state.booksState.books) || [{
+    id: '0',
+    title: 'Loading...',
+    category: 'Loading...',
+  }];
 
   return (
     <div className="list">

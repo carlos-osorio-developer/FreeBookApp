@@ -13,7 +13,10 @@ export const getBooks = () => async (dispatch) => {
   dispatch({ type: GET_BOOKS });
   const response = await fetch(`${API_URL}/${API_KEY}/books/`);
   const data = await response.json();
-  return dispatch({ type: GET_BOOKS_SUCCESS, payload: data });
+  const dataKeys = Object.keys(data);
+  const books = [];
+  dataKeys.forEach((id) => { books.push({ id, ...data[id][0] }); });
+  return dispatch({ type: GET_BOOKS_SUCCESS, payload: books });
 };
 
 export const addBook = (payload) => ({
@@ -48,7 +51,16 @@ export default function reducer(state = initialState, action) {
       });
       return state;
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload.id);
+      fetch(`${API_URL}/${API_KEY}/books/`, {
+        method: 'DELETE',
+        body: JSON.stringify({
+          item_id: action.payload.id,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      return state;
     default:
       return state;
   }
