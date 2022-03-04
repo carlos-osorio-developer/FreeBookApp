@@ -49,9 +49,9 @@ export default function reducer(state = initialState, action) {
           'Content-Type': 'application/json',
         },
       });
-      return state;
+      return { ...state, books: [...state.books, action.payload] };
     case REMOVE_BOOK:
-      fetch(`${API_URL}/${API_KEY}/books/`, {
+      fetch(`${API_URL}/${API_KEY}/books/${action.payload.id}`, {
         method: 'DELETE',
         body: JSON.stringify({
           item_id: action.payload.id,
@@ -60,7 +60,7 @@ export default function reducer(state = initialState, action) {
           'Content-Type': 'application/json',
         },
       });
-      return state;
+      return { ...state, books: state.books.filter((book) => book.id !== action.payload.id) };
     default:
       return state;
   }
