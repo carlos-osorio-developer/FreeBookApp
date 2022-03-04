@@ -2,7 +2,7 @@ import { React, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Book from './book';
 import NewForm from './newForm';
-import getBooks from '../redux/books/booksSlice';
+import { getBooks } from '../redux/books/books';
 
 export default function List() {
   useEffect(() => {
