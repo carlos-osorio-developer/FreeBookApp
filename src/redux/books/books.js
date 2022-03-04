@@ -6,14 +6,14 @@ const REMOVE_BOOK = 'freeBookApp/books/REMOVE_BOOK';
 
 const initialState = [];
 
-const API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
+const API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps';
 const API_KEY = 'upaRL8JIMk8no5RKgL1L';
 
 export const getBooks = () => async (dispatch) => {
   dispatch({ type: GET_BOOKS });
   const response = await fetch(`${API_URL}/${API_KEY}/books/`);
   const data = await response.json();
-  return dispatch({ type: GET_BOOKS_SUCCESS, data });
+  return dispatch({ type: GET_BOOKS_SUCCESS, payload: data });
 };
 
 export const addBook = (payload) => ({

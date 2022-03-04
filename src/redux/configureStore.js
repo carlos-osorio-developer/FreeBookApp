@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import booksReducer from './books/books';
 
 const reducer = combineReducers({
-  books: booksReducer,
+  booksState: booksReducer,
   // add if you need more
 });
 

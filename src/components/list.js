@@ -1,15 +1,17 @@
 import { React, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Book from './book';
 import NewForm from './newForm';
 import { getBooks } from '../redux/books/books';
 
 export default function List() {
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    getBooks();
+    dispatch(getBooks());
   }, []);
 
-  const books = useSelector((state) => state.books);
+  const books = useSelector((state) => state.booksState.books) || [{ id: 0, title: 'No books yet...' }];
 
   return (
     <div className="list">
