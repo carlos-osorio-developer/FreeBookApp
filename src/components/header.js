@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="header">
+      <header className="container">
         <h1 className="header-title">
           <Link to="/">
             <span className="header-title-text">
