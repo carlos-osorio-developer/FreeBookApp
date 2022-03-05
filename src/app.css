@@ -171,12 +171,10 @@ nav ul li a:hover,
 
 .book-progress-text :nth-child(2) {
   margin: 0;
-  opacity: 0.5;
+  opacity: 0.9;
   font-size: 0.875rem;
   font-family: 'Montserrat', sans-serif;
 }
-
-/* --- */
 
 .book-chapter {
   width: 50%;
@@ -188,7 +186,7 @@ nav ul li a:hover,
 .book-chapter p:nth-child(1) {
   font-size: 0.813rem;
   margin: 0;
-  opacity: 0.5;
+  opacity: 0.9;
   font-weight: 300;
 }
 
@@ -211,32 +209,32 @@ nav ul li a:hover,
   color: #fff;
 }
 
-/* ADD BOOKS ==================== */
-
 .book-add-h {
   margin-top: 40px;
   padding-top: 30px;
   border-top: 3px solid #e6e6e6;
-  color: #888;
+  color: #686868;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
+  text-align: center;
 }
 
 .book-add-form {
   width: 100%;
   display: flex;
+  justify-content: center;
   gap: 2.125rem;
   margin-bottom: 10rem;
 }
 
 .book-add-title {
-  width: 41.5rem;
+  width: 10rem;
   border: 1px solid #e8e8e8;
   border-radius: 4px;
   font-size: 1rem;
   padding: 0.813rem 1.063rem;
   font-family: 'Montserrat', sans-serif;
-  color: #c4c4c4;
+  color: #8b8b8b;
 }
 
 .book-add-category {
@@ -246,7 +244,7 @@ nav ul li a:hover,
   font-size: 1rem;
   padding: 0.813rem 1.063rem;
   font-family: 'Montserrat', sans-serif;
-  color: #c4c4c4;
+  color: #8b8b8b;
 }
 
 .book-add-category option {
@@ -261,4 +259,5 @@ nav ul li a:hover,
   color: white;
   border: 0;
   border-radius: 4px;
+  font-size: 1rem;
 }

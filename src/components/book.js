@@ -29,17 +29,23 @@ export default function Book(props) {
           <button type="button">Edit</button>
         </div>
       </div>
-      <div className="book-center">
-        <p>{completed}</p>
-        <span>Completed</span>
+      <div className="book-status">
+        <div className="book-progress">
+          <i />
+          <div className="book-progress-rectangle">
+            <div className="book-progress-circle" />
+          </div>
+
+          <div className="book-progress-text">
+            <p className="book-progress-percentage">{`${completed}%`}</p>
+            <p>Completed</p>
+          </div>
+        </div>
       </div>
-      <div className="book-right">
-        <p>Current chapter</p>
-        <span>
-          Chapter
-          {chapter}
-        </span>
-        <button type="button">Update Progress</button>
+      <div className="book-chapter">
+        <p>CURRENT CHAPTER</p>
+        <p className="book-chapter-current">{chapter}</p>
+        <button type="button" className="book-chapter-update">UPDATE PROGRESS</button>
       </div>
     </div>
   );
@@ -50,6 +56,11 @@ Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  completed: PropTypes.number.isRequired,
-  chapter: PropTypes.number.isRequired,
+  completed: PropTypes.number,
+  chapter: PropTypes.number,
+};
+
+Book.defaultProps = {
+  completed: 22,
+  chapter: 1,
 };

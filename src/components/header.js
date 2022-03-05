@@ -18,12 +18,12 @@ export default function Header() {
   return (
     <div>
       <header className="container">
-        <h1>
-          <Link to="/" className="brand">
-            Book Tracker
-          </Link>
-        </h1>
         <nav className="header-nav">
+          <h1>
+            <Link to="/" className="brand">
+              Book Tracker
+            </Link>
+          </h1>
           <ul className="header-nav-list">
             {links.map((link) => (
               <li key={link.id} className="header-nav-item">
