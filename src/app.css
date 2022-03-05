@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto+Slab:wght@200;300;500&display=swap');
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fafafa;
+}
+
+* {
+  font-family: 'Roboto Slab', serif;
+  color: #121212;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.has-navbar {
+  padding-top: 8.3rem;
+}
+
+button {
+  transition: 0.2s;
+}
+
+button:hover,
+input[type=submit]:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+nav {
+  background: white;
+  border-bottom: 1px solid #e8e8e8;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+nav > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.brand {
+  margin: 1.8rem 1rem;
+  font-size: 1.875rem;
+  color: #0290ff;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 0.813rem;
+  padding: 0 15px;
+  transition: 0.2s;
+  letter-spacing: 1.9px;
+  opacity: 0.9;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.book-actions a {
+  color: #0290ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav ul li a:hover,
+.active-link {
+  opacity: 1;
+  font-weight: 500;
+}
+
+.book {
+  display: flex;
+  background-color: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 2rem 1.688rem 1.75rem 1.688rem;
+}
+
+/* First Half */
+
+.book-details {
+  width: 50%;
+}
+
+.book-category {
+  font-size: 0.875rem;
+  font-weight: bold;
+  opacity: 0.5;
+  margin: 0 2.438rem 0 0;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: capitalize;
+}
+
+.book-title {
+  font-weight: bold;
+  margin: 0.188rem 0 0;
+  font-size: 1.375rem;
+  text-transform: capitalize;
+}
+
+.book-author {
+  color: #0290ff;
+  margin: 0.25rem 0 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.book-actions {
+  margin: 1.25rem 0 0 0;
+  color: #c0c0c0;
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+
+.book-status {
+  display: flex;
+  width: 50%;
+}
+
+.book-progress {
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.book-progress-rectangle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.book-progress-circle {
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 5px solid #307bbe;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.book-progress-text {
+  border-right: 2px solid #e8e8e8;
+  margin-right: 3.688rem;
+  padding-right: 3.688rem;
+  height: 4.375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-progress-percentage {
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+.book-progress-text :nth-child(2) {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.875rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.book-chapter {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-chapter p:nth-child(1) {
+  font-size: 0.813rem;
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.book-chapter-current {
+  font-weight: 200;
+  margin: 0.438rem 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.book-chapter-update {
+  background-color: #0290ff;
+  width: 11.5rem;
+  height: 2.063rem;
+  border: 0;
+  margin: 0.75rem 0 0.563rem 0;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  font-size: 0.833rem;
+  font-weight: 200;
+  color: #fff;
+}
+
+.book-add-h {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 3px solid #e6e6e6;
+  color: #686868;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.book-add-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2.125rem;
+  margin-bottom: 10rem;
+}
+
+.book-add-title {
+  width: 10rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 0.813rem 1.063rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #8b8b8b;
+}
+
+.book-add-category {
+  width: 17.813rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 0.813rem 1.063rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #8b8b8b;
+}
+
+.book-add-category option {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.book-add-button {
+  width: 11.5rem;
+  padding: 10px;
+  background: #0290ff;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  font-size: 1rem;
+}
