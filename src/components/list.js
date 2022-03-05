@@ -18,7 +18,7 @@ export default function List() {
   }];
 
   return (
-    <div className="list">
+    <div className="container has-navbar">
       {books.map((book) => (
         <Book
           key={book.id}

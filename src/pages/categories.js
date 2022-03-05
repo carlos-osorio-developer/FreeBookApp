@@ -2,6 +2,8 @@ import React from 'react';
 
 export default function Categories() {
   return (
-    <p>Under construction...</p>
+    <div className="container has-navbar">
+      <p>Under construction...</p>
+    </div>
   );
 }

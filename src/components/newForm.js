@@ -27,11 +27,18 @@ export default function NewForm() {
   };
 
   return (
-    <form className="form" onSubmit={dispatchNewBook}>
-      <input required type="text" name="title" placeholder="Title" className="form-title" onChange={handleChange} />
-      <input required type="text" name="author" placeholder="Author" className="form-author" onChange={handleChange} />
-      <input required type="text" name="category" placeholder="Category" className="form-category" onChange={handleChange} />
-      <button type="submit" className="form-submit">Add</button>
-    </form>
+    <div>
+      <h2 className="book-add-h">ADD NEW BOOK</h2>
+      <form className="book-add-form" onSubmit={dispatchNewBook}>
+        <input required type="text" name="title" placeholder="Title" className="book-add-title" onChange={handleChange} />
+        <select className="book-add-category" name="category" id="categories" onChange={handleChange}>
+          <option value="">Category</option>
+          <option value="action">Action</option>
+          <option value="science-fiction">Science Fiction</option>
+          <option value="economy">Economy</option>
+        </select>
+        <button type="submit" className="book-add-button">Add</button>
+      </form>
+    </div>
   );
 }

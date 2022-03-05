@@ -15,29 +15,37 @@ export default function Book(props) {
 
   return (
     <div className="book">
-      <div className="book-left">
-        <div className="info">
-          <span>{category}</span>
-          <h2>{title}</h2>
-          <h3>{author}</h3>
+      <div className="book-details">
+        <div>
+          <span className="book-category">{category}</span>
+          <h2 className="book-title">{title}</h2>
+          <h3 className="book-author">{author}</h3>
         </div>
-        <div className="buttons">
+        <div className="book-actions">
           <button type="button">Comments</button>
+          {' | '}
           <button type="button" onClick={deleteBook}>Remove</button>
+          {' | '}
           <button type="button">Edit</button>
         </div>
       </div>
-      <div className="book-center">
-        <p>{completed}</p>
-        <span>Completed</span>
+      <div className="book-status">
+        <div className="book-progress">
+          <i />
+          <div className="book-progress-rectangle">
+            <div className="book-progress-circle" />
+          </div>
+
+          <div className="book-progress-text">
+            <p className="book-progress-percentage">{`${completed}%`}</p>
+            <p>Completed</p>
+          </div>
+        </div>
       </div>
-      <div className="book-right">
-        <p>Current chapter</p>
-        <span>
-          Chapter
-          {chapter}
-        </span>
-        <button type="button">Update Progress</button>
+      <div className="book-chapter">
+        <p>CURRENT CHAPTER</p>
+        <p className="book-chapter-current">{chapter}</p>
+        <button type="button" className="book-chapter-update">UPDATE PROGRESS</button>
       </div>
     </div>
   );
@@ -48,6 +56,11 @@ Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  completed: PropTypes.number.isRequired,
-  chapter: PropTypes.number.isRequired,
+  completed: PropTypes.number,
+  chapter: PropTypes.number,
+};
+
+Book.defaultProps = {
+  completed: 22,
+  chapter: 1,
 };
