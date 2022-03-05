@@ -18,11 +18,9 @@ export default function Header() {
   return (
     <div>
       <header className="container">
-        <h1 className="header-title">
-          <Link to="/">
-            <span className="header-title-text">
-              Book Tracker
-            </span>
+        <h1>
+          <Link to="/" className="brand">
+            Book Tracker
           </Link>
         </h1>
         <nav className="header-nav">

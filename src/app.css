@@ -31,8 +31,6 @@ input[type=submit]:hover {
   opacity: 0.6;
 }
 
-/* NAVBAR ======================= */
-
 nav {
   background: white;
   border-bottom: 1px solid #e8e8e8;
@@ -48,10 +46,11 @@ nav > div {
 }
 
 .brand {
-  margin: 1.8rem 0;
+  margin: 1.8rem 1rem;
   font-size: 1.875rem;
   color: #0290ff;
   font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
 }
 
 nav ul {
@@ -65,7 +64,7 @@ nav ul li a {
   padding: 0 15px;
   transition: 0.2s;
   letter-spacing: 1.9px;
-  opacity: 0.5;
+  opacity: 0.9;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -80,8 +79,6 @@ nav ul li a:hover,
   opacity: 1;
   font-weight: 500;
 }
-
-/* BOOKS ======================== */
 
 .book {
   display: flex;
