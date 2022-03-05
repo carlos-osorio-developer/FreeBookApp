@@ -15,15 +15,17 @@ export default function Book(props) {
 
   return (
     <div className="book">
-      <div className="book-left">
-        <div className="info">
-          <span>{category}</span>
-          <h2>{title}</h2>
-          <h3>{author}</h3>
+      <div className="book-details">
+        <div>
+          <span className="book-category">{category}</span>
+          <h2 className="book-title">{title}</h2>
+          <h3 className="book-author">{author}</h3>
         </div>
-        <div className="buttons">
+        <div className="book-actions">
           <button type="button">Comments</button>
+          {' | '}
           <button type="button" onClick={deleteBook}>Remove</button>
+          {' | '}
           <button type="button">Edit</button>
         </div>
       </div>
